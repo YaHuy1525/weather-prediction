@@ -1,0 +1,89 @@
+2025-09-16 18:06:01,736 - INFO - DataProcessing initialized
+2025-09-16 18:06:02,020 - INFO - Data loaded successfully
+2025-09-16 18:06:02,205 - INFO - Data preprocessing completed
+2025-09-16 18:06:02,229 - INFO - Label encoding error
+2025-09-16 18:07:02,295 - INFO - DataProcessing initialized
+2025-09-16 18:07:02,556 - INFO - Data loaded successfully
+2025-09-16 18:07:02,737 - INFO - Data preprocessing completed
+2025-09-16 18:07:02,762 - INFO - Label encoding error
+2025-09-16 18:07:58,943 - INFO - DataProcessing initialized
+2025-09-16 18:07:59,213 - INFO - Data loaded successfully
+2025-09-16 18:07:59,406 - INFO - Data preprocessing completed
+2025-09-16 18:07:59,425 - INFO - Label encoding error
+2025-09-16 18:08:52,515 - INFO - DataProcessing initialized
+2025-09-16 18:08:52,779 - INFO - Data loaded successfully
+2025-09-16 18:08:52,941 - INFO - Data preprocessing completed
+2025-09-16 18:08:52,984 - INFO - Label encoding error
+2025-09-16 18:12:30,144 - INFO - DataProcessing initialized
+2025-09-16 18:12:30,418 - INFO - Data loaded successfully
+2025-09-16 18:12:30,596 - INFO - Data preprocessing completed
+2025-09-16 18:12:30,613 - INFO - Label mapping for Location
+2025-09-16 18:12:30,613 - INFO - {'Adelaide': 0, 'Albury': 1, 'AliceSprings': 2, 'BadgerysCreek': 3, 'Ballarat': 4, 'Bendigo': 5, 'Brisbane': 6, 'Cairns': 7, 'Canberra': 8, 'Cobar': 9, 'CoffsHarbour': 10, 'Dartmoor': 11, 'Darwin': 12, 'GoldCoast': 13, 'Hobart': 14, 'Katherine': 15, 'Launceston': 16, 'Melbourne': 17, 'MelbourneAirport': 18, 'Mildura': 19, 'Moree': 20, 'MountGambier': 21, 'MountGinini': 22, 'Nhil': 23, 'NorahHead': 24, 'NorfolkIsland': 25, 'Nuriootpa': 26, 'PearceRAAF': 27, 'Penrith': 28, 'Perth': 29, 'PerthAirport': 30, 'Portland': 31, 'Richmond': 32, 'Sale': 33, 'SalmonGums': 34, 'Sydney': 35, 'SydneyAirport': 36, 'Townsville': 37, 'Tuggeranong': 38, 'Uluru': 39, 'WaggaWagga': 40, 'Walpole': 41, 'Watsonia': 42, 'Williamtown': 43, 'Witchcliffe': 44, 'Wollongong': 45, 'Woomera': 46}
+2025-09-16 18:12:30,632 - INFO - Label mapping for WindGustDir
+2025-09-16 18:12:30,632 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-09-16 18:12:30,632 - ERROR - Label encoding error
+2025-09-16 18:14:46,648 - INFO - DataProcessing initialized
+2025-09-16 18:14:46,956 - INFO - Data loaded successfully
+2025-09-16 18:14:47,551 - INFO - Data preprocessing completed
+2025-09-16 18:14:47,568 - INFO - Label mapping for Location
+2025-09-16 18:14:47,568 - INFO - {'Adelaide': 0, 'Albury': 1, 'AliceSprings': 2, 'BadgerysCreek': 3, 'Ballarat': 4, 'Bendigo': 5, 'Brisbane': 6, 'Cairns': 7, 'Canberra': 8, 'Cobar': 9, 'CoffsHarbour': 10, 'Dartmoor': 11, 'Darwin': 12, 'GoldCoast': 13, 'Hobart': 14, 'Katherine': 15, 'Launceston': 16, 'Melbourne': 17, 'MelbourneAirport': 18, 'Mildura': 19, 'Moree': 20, 'MountGambier': 21, 'MountGinini': 22, 'Nhil': 23, 'NorahHead': 24, 'NorfolkIsland': 25, 'Nuriootpa': 26, 'PearceRAAF': 27, 'Penrith': 28, 'Perth': 29, 'PerthAirport': 30, 'Portland': 31, 'Richmond': 32, 'Sale': 33, 'SalmonGums': 34, 'Sydney': 35, 'SydneyAirport': 36, 'Townsville': 37, 'Tuggeranong': 38, 'Uluru': 39, 'WaggaWagga': 40, 'Walpole': 41, 'Watsonia': 42, 'Williamtown': 43, 'Witchcliffe': 44, 'Wollongong': 45, 'Woomera': 46}
+2025-09-16 18:14:47,589 - INFO - Label mapping for WindGustDir
+2025-09-16 18:14:47,589 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-09-16 18:14:47,609 - INFO - Label mapping for WindDir9am
+2025-09-16 18:14:47,609 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-09-16 18:14:47,627 - INFO - Label mapping for WindDir3pm
+2025-09-16 18:14:47,627 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-09-16 18:14:47,647 - INFO - Label mapping for RainToday
+2025-09-16 18:14:47,647 - INFO - {'No': 0, 'Yes': 1}
+2025-09-16 18:14:47,667 - INFO - Label mapping for RainTomorrow
+2025-09-16 18:14:47,667 - INFO - {'No': 0, 'Yes': 1}
+2025-09-16 18:14:47,686 - INFO - Index(['Location', 'MinTemp', 'MaxTemp', 'Rainfall', 'Evaporation', 'Sunshine',
+       'WindGustDir', 'WindGustSpeed', 'WindDir9am', 'WindDir3pm',
+       'WindSpeed9am', 'WindSpeed3pm', 'Humidity9am', 'Humidity3pm',
+       'Pressure9am', 'Pressure3pm', 'Cloud9am', 'Cloud3pm', 'Temp9am',
+       'Temp3pm', 'RainToday', 'Year', 'Month', 'Day'],
+      dtype='object')
+2025-09-16 18:14:47,780 - INFO - Data split completed
+2025-09-16 18:14:47,785 - INFO - Data progcessiing competed
+2025-09-16 18:15:07,681 - INFO - DataProcessing initialized
+2025-09-16 18:15:08,050 - INFO - Data loaded successfully
+2025-09-16 18:15:08,807 - INFO - Data preprocessing completed
+2025-09-16 18:15:08,825 - INFO - Label mapping for Location
+2025-09-16 18:15:08,826 - INFO - {'Adelaide': 0, 'Albury': 1, 'AliceSprings': 2, 'BadgerysCreek': 3, 'Ballarat': 4, 'Bendigo': 5, 'Brisbane': 6, 'Cairns': 7, 'Canberra': 8, 'Cobar': 9, 'CoffsHarbour': 10, 'Dartmoor': 11, 'Darwin': 12, 'GoldCoast': 13, 'Hobart': 14, 'Katherine': 15, 'Launceston': 16, 'Melbourne': 17, 'MelbourneAirport': 18, 'Mildura': 19, 'Moree': 20, 'MountGambier': 21, 'MountGinini': 22, 'Nhil': 23, 'NorahHead': 24, 'NorfolkIsland': 25, 'Nuriootpa': 26, 'PearceRAAF': 27, 'Penrith': 28, 'Perth': 29, 'PerthAirport': 30, 'Portland': 31, 'Richmond': 32, 'Sale': 33, 'SalmonGums': 34, 'Sydney': 35, 'SydneyAirport': 36, 'Townsville': 37, 'Tuggeranong': 38, 'Uluru': 39, 'WaggaWagga': 40, 'Walpole': 41, 'Watsonia': 42, 'Williamtown': 43, 'Witchcliffe': 44, 'Wollongong': 45, 'Woomera': 46}
+2025-09-16 18:15:08,848 - INFO - Label mapping for WindGustDir
+2025-09-16 18:15:08,848 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-09-16 18:15:08,869 - INFO - Label mapping for WindDir9am
+2025-09-16 18:15:08,869 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-09-16 18:15:08,890 - INFO - Label mapping for WindDir3pm
+2025-09-16 18:15:08,890 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-09-16 18:15:08,908 - INFO - Label mapping for RainToday
+2025-09-16 18:15:08,908 - INFO - {'No': 0, 'Yes': 1}
+2025-09-16 18:15:08,929 - INFO - Label mapping for RainTomorrow
+2025-09-16 18:15:08,930 - INFO - {'No': 0, 'Yes': 1}
+2025-09-16 18:15:08,939 - INFO - Index(['Location', 'MinTemp', 'MaxTemp', 'Rainfall', 'Evaporation', 'Sunshine',
+       'WindGustDir', 'WindGustSpeed', 'WindDir9am', 'WindDir3pm',
+       'WindSpeed9am', 'WindSpeed3pm', 'Humidity9am', 'Humidity3pm',
+       'Pressure9am', 'Pressure3pm', 'Cloud9am', 'Cloud3pm', 'Temp9am',
+       'Temp3pm', 'RainToday', 'Year', 'Month', 'Day'],
+      dtype='object')
+2025-09-16 18:15:09,045 - INFO - Data split completed
+2025-09-16 18:15:09,048 - INFO - Data progcessiing competed
+2025-09-16 18:16:13,234 - INFO - DataProcessing initialized
+2025-09-16 18:16:13,547 - INFO - Data loaded successfully
+2025-09-16 18:16:14,277 - INFO - Data preprocessing completed
+2025-09-16 18:16:14,295 - INFO - Label mapping for Location
+2025-09-16 18:16:14,295 - INFO - {'Adelaide': 0, 'Albury': 1, 'AliceSprings': 2, 'BadgerysCreek': 3, 'Ballarat': 4, 'Bendigo': 5, 'Brisbane': 6, 'Cairns': 7, 'Canberra': 8, 'Cobar': 9, 'CoffsHarbour': 10, 'Dartmoor': 11, 'Darwin': 12, 'GoldCoast': 13, 'Hobart': 14, 'Katherine': 15, 'Launceston': 16, 'Melbourne': 17, 'MelbourneAirport': 18, 'Mildura': 19, 'Moree': 20, 'MountGambier': 21, 'MountGinini': 22, 'Nhil': 23, 'NorahHead': 24, 'NorfolkIsland': 25, 'Nuriootpa': 26, 'PearceRAAF': 27, 'Penrith': 28, 'Perth': 29, 'PerthAirport': 30, 'Portland': 31, 'Richmond': 32, 'Sale': 33, 'SalmonGums': 34, 'Sydney': 35, 'SydneyAirport': 36, 'Townsville': 37, 'Tuggeranong': 38, 'Uluru': 39, 'WaggaWagga': 40, 'Walpole': 41, 'Watsonia': 42, 'Williamtown': 43, 'Witchcliffe': 44, 'Wollongong': 45, 'Woomera': 46}
+2025-09-16 18:16:14,318 - INFO - Label mapping for WindGustDir
+2025-09-16 18:16:14,318 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-09-16 18:16:14,339 - INFO - Label mapping for WindDir9am
+2025-09-16 18:16:14,339 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-09-16 18:16:14,359 - INFO - Label mapping for WindDir3pm
+2025-09-16 18:16:14,359 - INFO - {'E': 0, 'ENE': 1, 'ESE': 2, 'N': 3, 'NE': 4, 'NNE': 5, 'NNW': 6, 'NW': 7, 'S': 8, 'SE': 9, 'SSE': 10, 'SSW': 11, 'SW': 12, 'W': 13, 'WNW': 14, 'WSW': 15}
+2025-09-16 18:16:14,379 - INFO - Label mapping for RainToday
+2025-09-16 18:16:14,379 - INFO - {'No': 0, 'Yes': 1}
+2025-09-16 18:16:14,400 - INFO - Label mapping for RainTomorrow
+2025-09-16 18:16:14,400 - INFO - {'No': 0, 'Yes': 1}
+2025-09-16 18:16:14,411 - INFO - X shape: (123710, 24), y shape: (123710,)
+2025-09-16 18:16:14,411 - INFO - Columns: ['Location', 'MinTemp', 'MaxTemp', 'Rainfall', 'Evaporation', 'Sunshine', 'WindGustDir', 'WindGustSpeed', 'WindDir9am', 'WindDir3pm', 'WindSpeed9am', 'WindSpeed3pm', 'Humidity9am', 'Humidity3pm', 'Pressure9am', 'Pressure3pm', 'Cloud9am', 'Cloud3pm', 'Temp9am', 'Temp3pm', 'RainToday', 'Year', 'Month', 'Day']
+2025-09-16 18:16:14,500 - INFO - Data split completed
+2025-09-16 18:16:14,505 - INFO - Data progcessiing competed

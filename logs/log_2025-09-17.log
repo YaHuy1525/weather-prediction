@@ -1,0 +1,17 @@
+2025-09-17 17:22:27,710 - INFO - ModelTraining initialized
+2025-09-17 17:23:18,576 - INFO - ModelTraining initialized
+2025-09-17 17:23:18,634 - INFO - Data loaded
+2025-09-17 17:23:21,195 - INFO - Model trained
+2025-09-17 17:23:48,178 - INFO - ModelTraining initialized
+2025-09-17 17:23:48,206 - INFO - Data loaded
+2025-09-17 17:23:50,736 - INFO - Model trained
+2025-09-17 17:24:40,759 - INFO - ModelTraining initialized
+2025-09-17 17:24:40,786 - INFO - Data loaded
+2025-09-17 17:24:43,421 - INFO - Model trained
+2025-09-17 17:24:43,464 - INFO - Training score: 0.8990582814647159
+2025-09-17 17:26:34,657 - INFO - ModelTraining initialized
+2025-09-17 17:26:34,682 - INFO - Data loaded
+2025-09-17 17:26:37,127 - INFO - Model trained
+2025-09-17 17:26:37,188 - INFO - Training score: 0.8990582814647159
+2025-09-17 17:26:37,236 - INFO - Accuracy : 0.8649260366987309 ; Precision : 0.8580527908230612 ; Recall : 0.8649260366987309  : F1-Score : 0.8584494174064223
+2025-09-17 17:26:37,236 - INFO - Model evaluation done..
