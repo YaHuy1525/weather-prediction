@@ -2,42 +2,49 @@ name: CI/CD Development
   
 #If something push to main branch, this will be  executed
 on:
-  push: 
+  push:
     branches:
-          - main
-env:
-    PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
-    GKE_CLUSTER: "autopilot-cluster-2"
-    GKE_REGION: "australia-southeast2"
-    DELOYMENT_NAME: "weather-prediction"
-    REPOSITORY: "australia-southeast2-docker.pkg.dev/local-concord-457712-v7/weather-prediction"
-    IMAGE: "australia-southeast2-docker.pkg.dev/local-concord-457712-v7/weather-prediction/weather-prediction"
-jobs: 
-    build-and-deploy:
-          runs-on: ubuntu-latest
-          environment: production
-          container:
-                image: google/cloud-sdk:latest  
-          steps:
-              - name: Checkout Repository
-                uses: actions/checkout@v2
-              - name: Autheticate with Google Cloud
-                uses: google-github-actions/auth@v1
-                with:
-                  credentials_json: ${{secrets.GCP_SA_KEY}}
-              - name: Configure Cloud
-                run: 
-                  gcloud config set project $PROJECT_ID   
-                  gcloud auth configure-docker australia-southeast2-docker.pkg.dev 
-              - name: Building and Push image
-                run:
-                  docker build -t $IMAGE:$GITHUB_SHA
-                  docker push $IMAGE:$GITHUB_SHA
-              - name: GKR Configuration
-                run:
-                  gcloud container clusters ger-credentials $GKE_CLUSTER --region $GKE_REGION --project &PROJECT_ID
+      - main
 
-              - name: Deploying to Kubernetes
-                run: 
-                  kubectl apply -f kubernetes-deploymets.yaml    
-                  kubectl set image deployment/$DEPLOTMENT_NAME $DEPLOYMENT_NAME=$IMAGE:$GITHUB_SHA
+env:
+  PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+  GKE_CLUSTER: "autopilot-cluster-2"
+  GKE_REGION: "australia-southeast2"
+  DEPLOYMENT_NAME: "weather-prediction"
+  REPOSITORY: "australia-southeast2-docker.pkg.dev/local-concord-457712-v7/weather-prediction"
+  IMAGE: "australia-southeast2-docker.pkg.dev/local-concord-457712-v7/weather-prediction/weather-prediction"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: production
+    container:
+      image: google/cloud-sdk:latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        
+      - name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SA_KEY }}
+          
+      - name: Configure Cloud
+        run: |
+          gcloud config set project $PROJECT_ID
+          gcloud auth configure-docker australia-southeast2-docker.pkg.dev
+          
+      - name: Building and Push image
+        run: |
+          docker build -t $IMAGE:$GITHUB_SHA .
+          docker push $IMAGE:$GITHUB_SHA
+          
+      - name: GKE Configuration
+        run: |
+          gcloud container clusters get-credentials $GKE_CLUSTER --region $GKE_REGION --project $PROJECT_ID
+          
+      - name: Deploying to Kubernetes
+        run: |
+          kubectl apply -f kubernetes-deployments.yaml
+          kubectl set image deployment/$DEPLOYMENT_NAME $DEPLOYMENT_NAME=$IMAGE:$GITHUB_SHA
