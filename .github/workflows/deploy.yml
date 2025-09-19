@@ -48,9 +48,19 @@ jobs:
         env:
           USE_GKE_GCLOUD_AUTH_PLUGIN: True
         run: |
+          echo "Getting GKE credentials..."
           gcloud container clusters get-credentials $GKE_CLUSTER --region $GKE_REGION --project $PROJECT_ID
+          
+          echo "Testing kubectl connection..."
+          kubectl cluster-info --request-timeout=30s
+          
+          echo "Checking cluster status..."
+          kubectl get nodes --request-timeout=30s
           
       - name: Deploying to Kubernetes
         run: |
-          kubectl apply -f kubernetes-deployment.yaml
+          # Add timeout and retry logic
+          kubectl apply -f kubernetes-deployment.yaml --timeout=60s --validate=false
+          kubectl rollout status deployment/$DEPLOYMENT_NAME --timeout=300s
           kubectl set image deployment/$DEPLOYMENT_NAME $DEPLOYMENT_NAME=$IMAGE:$GITHUB_SHA
+          kubectl rollout status deployment/$DEPLOYMENT_NAME --timeout=300s
