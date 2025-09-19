@@ -1,6 +1,5 @@
-name: CI/CD Development
-  
-#If something push to main branch, this will be  executed
+name: Deploy to GKE
+
 on:
   push:
     branches:
@@ -18,8 +17,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     environment: production
-    container:
-      image: google/cloud-sdk:latest
     
     steps:
       - name: Checkout Repository
@@ -30,6 +27,9 @@ jobs:
         with:
           credentials_json: ${{ secrets.GCP_SA_KEY }}
           
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+        
       - name: Configure Cloud
         run: |
           gcloud config set project $PROJECT_ID
