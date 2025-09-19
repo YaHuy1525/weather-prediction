@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: weather-prediction
-        image: us-central1-docker.pkg.dev/mlops-new-447207/my-repo/weather-prediction:latest
+        image: us-central1-docker.pkg.dev/mlops-new-447207/weather-prediction/weather-prediction:latest
         ports:
         - containerPort: 5000
 
