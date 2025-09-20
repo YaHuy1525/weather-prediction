@@ -68,13 +68,13 @@ jobs:
             gcloud container clusters describe $GKE_CLUSTER --region $GKE_REGION --format="value(status)"
             
             echo "Attempting deployment without validation..."
-            kubectl apply -f kubernetes-deployments.yaml --validate=false --dry-run=client
+            kubectl apply -f kubernetes-deployment.yaml --validate=false --dry-run=client
             
             echo "If dry-run works, proceeding with actual deployment..."
-            kubectl apply -f kubernetes-deployments.yaml --validate=false --timeout=180s
+            kubectl apply -f kubernetes-deployment.yaml --validate=false --timeout=180s
           else
             echo "Cluster is accessible, proceeding with normal deployment..."
-            kubectl apply -f kubernetes-deployments.yaml --timeout=120s --validate=false
+            kubectl apply -f kubernetes-deployment.yaml --timeout=120s --validate=false
           fi
           
           echo "Waiting for deployment (with extended timeout)..."
