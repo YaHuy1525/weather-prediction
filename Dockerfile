@@ -1,25 +1,24 @@
-# Use an official Python runtime as a parent image
+# Use Python 3.9 slim image
 FROM python:3.9-slim
 
-# Set the working directory in the container
+# Set working directory
 WORKDIR /app
 
-# Copy requirements first to leverage Docker cache
+# Copy requirements first (for better caching)
 COPY requirements.txt .
+
+# Install Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the current directory contents into the container
+# Copy the entire project
 COPY . .
 
-# Install the package in development mode (if needed)
-RUN pip install -e .
-
-# Make port 5000 available to the world outside this container
+# Expose port 5000
 EXPOSE 5000
 
-# Environment variables
+# Set environment variables for Flask
 ENV FLASK_APP=app.py
-ENV FLASK_ENV=development
+ENV FLASK_ENV=production
 
 # Run the application
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["python", "app.py"]
