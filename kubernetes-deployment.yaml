@@ -13,20 +13,20 @@ spec:
         app: weather-prediction
     spec:
       containers:
-      - name: weather-prediction
-        image: australia-southeast2-docker.pkg.dev/local-concord-457712-v7/weather-prediction/weather-prediction:latest
-        ports:
-        - containerPort: 5000
-        env:
-        - name: PORT
-          value: "5000"
-        resources:
-          requests:
-            memory: "256Mi"
-            cpu: "250m"
-          limits:
-            memory: "512Mi"
-            cpu: "500m"
+        - name: weather-prediction
+          image: australia-southeast2-docker.pkg.dev/local-concord-457712-v7/weather-prediction/weather-prediction:latest
+          ports:
+            - containerPort: 5000
+          env:
+            - name: PORT
+              value: "5000"
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
 ---
 apiVersion: v1
 kind: Service
