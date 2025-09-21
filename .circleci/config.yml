@@ -1,0 +1,60 @@
+version: 2.1
+executors:
+  docker-executors:
+    docker:
+      - image: google/cloud-sdk:latest
+    working_directory: ~/repo
+jobs:
+  checkout_code:
+    executor: docker-executor
+    steps:
+      - checkout
+  build_docker_image: 
+    executor: docker-executor
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Authenticate with Google Cloud
+          command: |
+            echo $"GCLOUD_SERVICE_KEY" | base64 --decode > gcp-key.json
+            gcloud auth activate-service-account --key-file=gcp-key.json
+            gcloud auth configure-docker australia-southeast2-docker.pkg.dev || gcloud auth configure-docker
+      - run:
+          name: Build and push image
+          command: |
+                docker build -t australia-southeast2-docker.pkg.dev/$GOOGLE_PROJECT_ID/weather-prediction/weather-prediction:latest
+                docker push australia-southeast2-docker.pkg.dev/$GOOGLE_PROJECT_ID/weather-prediction/weather-prediction:latest
+  deploy_to_gke:
+    executor: docker-executor
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Authenticate with Google Cloud
+          command: |
+            echo $GCLOUD_SERVICE_KEY | base64 --decode > gcp-key.json
+            gcloud auth activate-service-account --key-file=gcp-key.json
+            gcloud auth configure-docker australia-southeast2-docker.pkg.dev || gcloud auth configure-docker
+      - run:
+          name: Configure GKE
+          command: |
+            gcloud container clusters get-credentials $GKE_CLUSTER --zone $GOOGLE_COMPUTE_ZONE --project $GOOGLE_PROJECT_ID
+      - run:
+          name: Deploy to GKE
+          command: |
+            kubectl apply -f kubernetes-deployment.yaml
+
+workflows:
+  version: 2
+  deploy_pipine:
+    jobs:
+      - checkout_code
+      - build_docker_image:
+          requires:
+            - checkout_code
+      - deploy_to_gke:
+          requires:
+            - build_docker_image
+
+
