@@ -1,6 +1,6 @@
 version: 2.1
 executors:
-  docker-executors:
+  docker-executor:
     docker:
       - image: google/cloud-sdk:latest
     working_directory: ~/repo
@@ -47,7 +47,7 @@ jobs:
 
 workflows:
   version: 2
-  deploy_pipine:
+  deploy_pipeline:
     jobs:
       - checkout_code
       - build_docker_image:
