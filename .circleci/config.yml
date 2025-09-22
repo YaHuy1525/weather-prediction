@@ -37,7 +37,7 @@ jobs:
       - run:
           name: Install kubectl
           command: |
-            gcloud components install kubectl gke-gcloud-auth-plugin
+            sudo apt-get install kubectl google-cloud-cli-gke-gcloud-auth-plugin
       - run:
           name: Authenticate with Google Cloud
           command: |
