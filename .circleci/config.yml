@@ -35,10 +35,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install kubectl
-          command: |
-            sudo apt-get install kubectl google-cloud-cli-gke-gcloud-auth-plugin
-      - run:
           name: Authenticate with Google Cloud
           command: |
             echo "$GCLOUD_SERVICE_KEY" | base64 --decode > gcp-key.json
