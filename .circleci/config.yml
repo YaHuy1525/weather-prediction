@@ -16,9 +16,7 @@ jobs:
     executor: docker-executor
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 20.10.14
-          docker_layer_caching: true
+      - setup_remote_docker
       - run:
           name: Authenticate with Google Cloud
           command: |
