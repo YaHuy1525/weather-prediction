@@ -26,6 +26,7 @@ jobs:
       - run:
           name: Build and push image
           command: |
+            apt-get update && apt-get install -y docker.io
             docker build -t australia-southeast2-docker.pkg.dev/$GOOGLE_PROJECT_ID/weather-prediction/weather-prediction:latest .
             docker push australia-southeast2-docker.pkg.dev/$GOOGLE_PROJECT_ID/weather-prediction/weather-prediction:latest
             
